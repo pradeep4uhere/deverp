@@ -77,6 +77,9 @@ Route::group(['middleware' => ['auth']], function() {
     Route::any('saveuploadpdf','PageController@saveuploadpdf')->name('saveuploadpdf');
     Route::any('pdflist','PageController@pdflist')->name('pdflist');
     Route::any('deletepdf/{id}','PageController@deletepdf')->name('deletepdf');
+    Route::get('getsubmenu/{id}','PageController@getSubMenu')->name('getsubmenu');
+    Route::get('getsubmenuedit/{id}/{selected}','PageController@getSubMenuEdit')->name('getsubmenuedit');
+
 
     //Location
     //Route::get('location','LocationController@allLocation')->name('location');
